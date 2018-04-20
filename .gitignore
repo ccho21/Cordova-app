@@ -1,0 +1,12 @@
+/node_modules
+/hooks
+/platforms
+/plugins
+/res
+/.idea
+/.vscode
+/.vagrant
+npm-debug.log
+yarn-error.log
+.npmignore
+package-lock.json
