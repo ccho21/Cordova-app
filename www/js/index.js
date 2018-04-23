@@ -285,16 +285,15 @@ var controller = (function (geoController) {
             console.log(locations);*/
             var mapOptions = geoController.getMapOptions();
 
-            var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+                var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+                var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
-            var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-
-            var markers = this.locations.map(function (location, i) {
-                // console.log(location);
-                return new google.maps.Marker({
-                    position: location,
-                    label: labels[i % labels.length],
-                    map: map
+                var markers = this.locations.map(function (location, i) {
+                    // console.log(location);
+                    return new google.maps.Marker({
+                        position: location,
+                        label: labels[i % labels.length],
+                        map: map
                 });
             });
         }
